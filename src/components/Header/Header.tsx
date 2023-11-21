@@ -2,7 +2,7 @@
 const Header = () => {
   return (
     <>
-      <p>Who's that pokemon</p>
+      <p>Poketrivia</p>
     </>
   )
 }

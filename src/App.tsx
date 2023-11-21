@@ -1,6 +1,6 @@
 import './App.css'
-import { Trivia } from './components/Trivia'
-import { Header } from './components/Header'
+import Trivia from './components/Trivia/Trivia'
+import Header from './components/Header/Header'
 
 function App() {
 
@@ -8,6 +8,7 @@ function App() {
     <>
       <Header />
       <Trivia />
+      
     </>
   )
 }
