@@ -1,12 +1,13 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from 'react';
+import { GameStatus } from "../../types/types";
 
 interface GuessProps {
   name: string
   setScore: React.Dispatch<React.SetStateAction<number[]>>;
-  setIsPlaying: React.Dispatch<React.SetStateAction<boolean>>;
+  setState: React.Dispatch<React.SetStateAction<GameStatus>>;
 }
 
-const Guess: React.FC<GuessProps> = ({ name, setScore, setIsPlaying }) => {
+const Guess: React.FC<GuessProps> = ({ name, setScore, setState }) => {
   const [answer, setAnswer] = useState<string>('')
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,13 +22,13 @@ const Guess: React.FC<GuessProps> = ({ name, setScore, setIsPlaying }) => {
       setScore((prevScore) => {
         return [prevScore[0] + 1, prevScore[1]]
       })
+      setState('correct')
     } else {
       setScore((prevScore) => {
         return [prevScore[0], prevScore[1] + 1]
       })
+      setState('incorrect')
     }
-
-    setIsPlaying(false)
   }
 
   return (

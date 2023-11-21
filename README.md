@@ -1,30 +1,23 @@
-# React + TypeScript + Vite
+# Who's That Pokemon?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Guess the Pokemon version of the popular video game series made with React, TypeScript, and Ness.css.
 
-Currently, two official plugins are available:
+## How to Run Locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run the project locally, you can use the following command:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+npm run dev
 ```
+Make sure to have Node.js and npm installed on your machine before running the above command.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Feel free to add more sections to your documentation, such as installation instructions, project structure, and usage examples, to provide comprehensive information about your project.
+
+## Todo
+the following is a list of nice-to-have for the final application:
+- [ ] focus input when the component renders
+- [ ] styles with ness.css
+- [ ] mobile compatibility
+- [ ] background music
+- [ ] keep local tracking of current score
+- [ ] select the generations you want to play with
