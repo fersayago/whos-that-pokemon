@@ -38,16 +38,24 @@ const Guess: React.FC<GuessProps> = ({ name, setScore, setState }) => {
     }
   }
 
+  const btnClass = answer ? 'nes-btn is-primary' : 'nes-btn is-disabled'
+
   return (
     <form onSubmit={handleSubmit}>
       <input
+        className='nes-input'
         ref={inputRef}
-        type="text"
-        placeholder="Your answer"
+        type='text'
+        placeholder='Your answer'
         value={answer}
         onChange={handleOnChange}
       />
-      <button>Guess</button>
+      <button
+        disabled={!answer}
+        className={btnClass}
+      >
+        Guess
+      </button>
     </form>
   )
 }

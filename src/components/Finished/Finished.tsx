@@ -15,10 +15,15 @@ const Finished: React.FC<FinishedProps> = ({ state, name, nextPokemon }) => {
     <>
       {
         state === 'correct'
-          ? <p>Correct! It's {name}</p>
-          : <p>Incorrect! It's {name}</p>
+          ? <p className='nes-text is-success'>Correct! It's {name}</p>
+          : <p className='nes-text is-error'>Incorrect! It's {name}</p>
       }
-      <button onClick={nextPokemon}>Play again!</button>
+      <button
+        onClick={nextPokemon}
+        className='nes-btn is-primary'
+      >
+        Play again!
+      </button>
     </>
   )
 }

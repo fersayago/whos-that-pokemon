@@ -33,7 +33,7 @@ const Trivia = () => {
   }, []);
 
   if (state === "loading") {
-    return <p>Loading...</p>;
+    return <i className="nes-octocat animate"></i>;
   }
 
   if (state === "error" || !pokemon) {

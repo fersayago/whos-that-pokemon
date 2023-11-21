@@ -1,14 +1,11 @@
 import './App.css'
-import Trivia from './components/Trivia/Trivia'
-import Header from './components/Header/Header'
+import Game from './components/Game/Game'
 
 function App() {
 
   return (
     <>
-      <Header />
-      <Trivia />
-      
+      <Game />
     </>
   )
 }

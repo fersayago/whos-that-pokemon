@@ -15,7 +15,7 @@ Feel free to add more sections to your documentation, such as installation instr
 
 ## Todo
 the following is a list of nice-to-have for the final application:
-- [ ] focus input when the component renders
+- [x] focus input when the component renders
 - [ ] styles with ness.css
 - [ ] mobile compatibility
 - [ ] background music
