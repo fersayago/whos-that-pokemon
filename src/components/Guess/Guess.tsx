@@ -9,6 +9,13 @@ interface GuessProps {
 
 const Guess: React.FC<GuessProps> = ({ name, setScore, setState }) => {
   const [answer, setAnswer] = useState<string>('')
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus()
+    }
+  }, [name])
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault()
@@ -34,6 +41,7 @@ const Guess: React.FC<GuessProps> = ({ name, setScore, setState }) => {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        ref={inputRef}
         type="text"
         placeholder="Your answer"
         value={answer}

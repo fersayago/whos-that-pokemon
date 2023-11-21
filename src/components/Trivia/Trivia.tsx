@@ -12,13 +12,15 @@ const Trivia = () => {
   const [pokemon, setPokemon] = useState<IPokemon | null>(null);
 
   const fetchNextPokemon = () => {
-    setState("playing");
+    setState('loading');
     fetchRandomPokemon()
       .then((pokemon) => {
         setPokemon(pokemon);
+        setState('playing')
       })
       .catch((error) => {
-        console.error("Failed to fetch a random Pokemon:", error);
+        console.error('Failed to fetch a random Pokemon:', error);
+        setState('error');
       });
   }
 
@@ -30,8 +32,12 @@ const Trivia = () => {
     fetchNextPokemon();
   }, []);
 
-  if (!pokemon) {
+  if (state === "loading") {
     return <p>Loading...</p>;
+  }
+
+  if (state === "error" || !pokemon) {
+    return <p>Failed to load Pokemon</p>;
   }
 
   return (

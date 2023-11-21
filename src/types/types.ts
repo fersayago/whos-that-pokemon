@@ -1,1 +1,1 @@
-export type GameStatus = "playing" | "correct" | "incorrect" | "loading";
+export type GameStatus = "playing" | "correct" | "incorrect" | "loading" | "error";
